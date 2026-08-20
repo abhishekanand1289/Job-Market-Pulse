@@ -1,0 +1,5 @@
+requests
+pandas
+python-jobspy
+mysql-connector-python
+numpy
