@@ -26,7 +26,7 @@ This pipeline is the data foundation for solving that problem.
 
 ## Pipeline Architecture
 
-
+```
 USAJobs REST API          LinkedIn + Indeed
 (Federal postings)        (Private sector)
         |                       |
@@ -46,6 +46,7 @@ USAJobs REST API          LinkedIn + Indeed
         ↓
    GitHub Backup
    (automated commit)
+```
 
 ---
 
@@ -68,7 +69,7 @@ Source, Job ID, Title, Company, Department, Location, Salary Min/Max, Salary Int
 
 ## Database Schema
 
-sql
+```sql
 CREATE TABLE job_postings (
     id                  BIGINT AUTO_INCREMENT PRIMARY KEY,
     source              VARCHAR(50),
@@ -92,7 +93,7 @@ CREATE TABLE job_postings (
     collected_at        DATETIME,
     UNIQUE KEY uq_source_job (source, job_id(100))
 );
-
+```
 
 The `UNIQUE KEY` on `(source, job_id)` ensures the same posting is never inserted twice — the pipeline uses upsert logic so duplicate runs update existing records rather than creating duplicates.
 
@@ -206,6 +207,7 @@ With months of daily data accumulating, the next phase is analysis and visualiza
 ## Tools & Skills
 
 | Category | Tools |
+|---|---|
 | Data Collection | Python, requests, python-jobspy |
 | Database | MySQL, SQL |
 | Automation | Windows Task Scheduler, Batch scripting |
