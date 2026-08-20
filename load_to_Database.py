@@ -9,7 +9,7 @@ conn = mysql.connector.connect(
     host='localhost',
     port=3306,
     user='root',
-    password='@1289Royal',
+    password='YOUR PASSWORD',
     database='job_postings'
 )
 cursor = conn.cursor()
