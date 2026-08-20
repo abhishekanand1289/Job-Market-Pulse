@@ -4,8 +4,8 @@ from jobspy import scrape_jobs
 from datetime import datetime
 import os
 
-API_KEY = "WYvjQd/FlCzygwHh1hQ9bjEWflR+6GhiiVEFIpvrT+o="
-EMAIL   = "a.battini@myemail.indwes.edu"
+API_KEY = "YOUR API KEY"
+EMAIL   = "YOUR EMAIL"
 
 KEYWORDS = [
     "data analyst", "data engineer", "data scientist", "business analyst",
